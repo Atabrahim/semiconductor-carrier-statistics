@@ -1,0 +1,90 @@
+{
+  "report_type": "NUMERICAL VERIFICATION; NOT EXPERIMENTAL VALIDATION",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "equilibrium_cases": 192,
+  "temperature_grid_K": [
+    40,
+    50,
+    100,
+    300,
+    500,
+    1000
+  ],
+  "doping_pairs_cm3": [
+    [
+      0,
+      0
+    ],
+    [
+      1000000000000.0,
+      0
+    ],
+    [
+      1000000000000000.0,
+      0
+    ],
+    [
+      0,
+      1e+16
+    ],
+    [
+      1e+16,
+      9000000000000000.0
+    ],
+    [
+      1000000000000000.0,
+      1000000000000000.0
+    ],
+    [
+      1e+17,
+      1e+17
+    ],
+    [
+      1e+20,
+      0
+    ]
+  ],
+  "scope": "Includes formal stress tests outside the physical model's intended scope.",
+  "checks": [
+    {
+      "name": "F_half(0): relative error against zeta identity",
+      "measured_error": 1.1102230246251565e-16,
+      "maximum_error": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "F_half: relative change when quadrature tolerance tightened",
+      "measured_error": 1.1324274851176597e-14,
+      "maximum_error": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "Equilibrium: maximum reduced charge-balance residual",
+      "measured_error": 5.955630433263082e-11,
+      "maximum_error": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "Boltzmann/complete: maximum relative error against quadratic",
+      "measured_error": 1.2282841410637957e-11,
+      "maximum_error": 2e-09,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "reference_model_values": {
+    "bandgap_300K_eV": 1.1240192307692307,
+    "effective_dos_300K_cm3": [
+      2.8319781581794095e+19,
+      1.02133077775324e+19
+    ],
+    "intrinsic_boltzmann_300K_cm3": 6155766827.822502,
+    "donor_1e15_300K_electron_cm3": 999588408696410.9,
+    "donor_1e15_300K_fermi_level_eV": 0.8589918959482765,
+    "donor_1e15_40K_ionized_fraction": 0.03463649367019248,
+    "fixed_fermi_energy_1percent_boltzmann_error_eta": -3.5600844344231013,
+    "fixed_fermi_energy_5percent_boltzmann_error_eta": -1.9297858775971093
+  }
+}
