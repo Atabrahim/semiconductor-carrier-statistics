@@ -62,7 +62,7 @@ def carrier_regimes(figures: Path, data: Path) -> None:
         intrinsic,
         ":",
         color=COLORS["reference"],
-        label=r"Intrinsic $n_i$: Boltzmann",
+        label=r"Analytical $n_i$: Boltzmann",
     )
     axes[0].set(
         ylim=(1e12, 2e18),
@@ -167,16 +167,17 @@ def approximation_limits(figures: Path, data: Path) -> None:
         norm=LogNorm(vmin=0.001, vmax=10000),
         cmap="magma",
     )
-    contours = axes[0].contour(
-        temperatures, donors, errors, levels=[1, 5, 50], colors="white", linewidths=1
-    )
-    axes[0].clabel(contours, fmt=lambda level: f"{level:g}%", fontsize=9)
     axes[0].set(
         yscale="log",
         xlabel="Temperature (K)",
         ylabel=r"Active donors (cm$^{-3}$)",
         title="A  |  Complete-ionization error at fixed doping",
     )
+    # Set the log scale before choosing label positions in display coordinates.
+    contours = axes[0].contour(
+        temperatures, donors, errors, levels=[1, 5, 50], colors="white", linewidths=1
+    )
+    axes[0].clabel(contours, fmt=lambda level: f"{level:g}%", fontsize=9)
     figure.colorbar(mesh, ax=axes[0], label="Electron-density overestimate (%)", extend="both")
     reduced_energies = np.linspace(-10, 4, 240)
     statistical_errors = np.array(
