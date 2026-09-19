@@ -1,5 +1,7 @@
 # Semiconductor Carrier Statistics
 
+[![Scientific checks](https://github.com/Atabrahim/semiconductor-carrier-statistics/actions/workflows/ci.yml/badge.svg)](https://github.com/Atabrahim/semiconductor-carrier-statistics/actions/workflows/ci.yml)
+
 **Solve equilibrium carrier populations in silicon and measure when Boltzmann statistics or complete dopant ionization become inaccurate.**
 
 ![Carrier populations, donor ionization and Fermi energy across temperature](figures/carrier_regimes.png)
@@ -114,7 +116,9 @@ No dashboard is required: the API, readable examples, and saved figures expose t
 - The numerical Boltzmann/complete-ionization solution agrees with its analytical quadratic to **1.23 × 10⁻¹¹** maximum relative error on that report grid.
 - Fermi-integral checks include a zeta-function identity, an independent integration variable, and the Sommerfeld limit.
 
-These small errors describe numerical consistency, **not uncertainty in real silicon**. [Validation methods and reproduced values](docs/validation.md) include the test environment, tolerances, and a numerical defect caught during development. CI is configured to run tests and reports on pushes and pull requests; only completed runs should be interpreted as passing.
+These small errors describe numerical consistency, **not uncertainty in real silicon**. [Validation methods and reproduced values](docs/validation.md) include the test environment, tolerances, and a numerical defect caught during development. CI builds the source distribution and wheel, installs the wheel, checks the public API and CLI outside the checkout, and runs tests, Ruff and the validation report. The badge links to the live results.
+
+The [v0.1.0 release review](docs/release-checks.md) records the clean-install checks, README command checks and visual inspection of every PNG/SVG figure.
 
 ## Project structure
 
