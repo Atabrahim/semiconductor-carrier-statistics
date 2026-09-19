@@ -64,7 +64,7 @@ $E_F$ is the chemical potential in eV. $n,p$ are electron/hole concentrations in
 
 Boltzmann statistics replace $F_{1/2}(\eta)$ by $\exp(\eta)$ when occupation is dilute. In this limit,
 
-$$n_i=\sqrt{N_CN_V}\exp\!\left(-\frac{E_g}{2k_{B,\mathrm{eV}}T}\right),\qquad np=n_i^2.$$
+$$n_i=\sqrt{N_CN_V}\exp\left(-\frac{E_g}{2k_{B,\mathrm{eV}}T}\right),\qquad np=n_i^2.$$
 
 $n_i$ is the analytical intrinsic carrier concentration for the **Boltzmann model with this parameter set**. The product relation does not generally hold under degeneracy. Incomplete dopant ionization alone does not invalidate Boltzmann mass action.
 
