@@ -16,8 +16,10 @@ The central questions are: **How many carriers are available? Where is the Fermi
 
 For a uniform, unstrained silicon crystal at thermal equilibrium:
 
-$$n=N_C F_{1/2}\!\left(\frac{E_F-E_C}{k_BT}\right),\qquad
-p=N_V F_{1/2}\!\left(\frac{E_V-E_F}{k_BT}\right)$$
+$$
+n=N_C F_{1/2}\left(\frac{E_F-E_C}{k_BT}\right),\qquad
+p=N_V F_{1/2}\left(\frac{E_V-E_F}{k_BT}\right)
+$$
 
 $$n+N_A^-=p+N_D^+.$$
 

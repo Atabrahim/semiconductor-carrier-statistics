@@ -1,0 +1,6 @@
+include LICENSE README.md
+recursive-include docs *.md *.json
+recursive-include examples *.py
+recursive-include data *.md *.csv
+recursive-include figures *.png *.svg
+recursive-include tests *.py
